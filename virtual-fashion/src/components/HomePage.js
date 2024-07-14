@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './HomePage.css';
+import {useNavigate} from 'react-router-dom';
 
 const HomePage = () => {
   const [clothes, setClothes] = useState([]);
-
+  const navigate=useNavigate();
   useEffect(() => {
     const fetchClothes = async () => {
       try {
@@ -21,7 +22,7 @@ const HomePage = () => {
   return (
     <div className="home-container">
       <header className="header">
-        <button className="header-button">Virtual Try On</button>
+        <button className="header-button" onClick={()=>navigate('/virtual-try-on')}>Virtual Try On</button>
         <button className="header-button">Virtual Runway</button>
       </header>
       <div className="content">

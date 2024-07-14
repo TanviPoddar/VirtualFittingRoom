@@ -1,0 +1,102 @@
+/* VirtualTryOn.css */
+
+.virtual-try-on-container {
+    display: flex;
+    height: 100vh; /* Ensure the container takes up full viewport height */
+    flex-direction: column; /* Column direction to allow the header on top */
+  }
+  
+  .virtual-try-on-header {
+    background-color: #1b4b5a; /* Background color for header */
+    color: #fff; /* Text color for header */
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex: 1; /* Take up the remaining space */
+    overflow: hidden; /* Hide overflow to allow scrolling within sections */
+  }
+  
+  .clothes-grid {
+    flex: 7; /* Take up 70% of the space */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .clothes-item {
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .try-on-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    background-color: #ffeb3b;
+    color: #000;
+    border-radius: 50%; /* Makes the button round */
+    padding: 10px;
+    width: 60px; /* Ensures the button is a circle */
+    height: 60px; /* Ensures the button is a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .virtual-try-on-container img {
+    width: 100%;
+    display: block;
+    height: 300px; /* Adjust this value to set your desired image length */
+    object-fit: cover; /* Adjust how images fit in the box (cover, contain, etc.), depending on your needs */
+  }
+  
+  .virtual-try-on-container p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .grey-box {
+    flex: 3; /* Take up 30% of the space */
+    background-color: #ccc; /* Grey color */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    height: 100%;
+    align-items: center;
+  }
+  
+  .grey-box-buttons {
+    width: 100%; /* Ensure the buttons container spans the full width of the grey box */
+    display: flex;
+    justify-content: space-between; /* Adjust this to change the spacing between buttons */
+    padding-top: 20px; /* Add some space above the buttons */
+    margin-top: 20px; /* Add some space below the buttons */
+  }
+  
+  .grey-box-button {
+    width: calc(50% - 10px); /* Each button takes 50% width with some gap */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    text-align: center; /* Ensure text is centered */
+    background-color: #1b4b5a; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Adjust font size */
+  }
+  
